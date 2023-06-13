@@ -8,7 +8,17 @@
 */
 
 function isAnagram(str1, str2) {
+    const cleanstr1 = str1.toLowerCase().replace(/[^a-z0-9]/g,"");
+    const cleanstr2 = str2.toLowerCase().replace(/[^a-z0-9]/g,"");
+
+if (cleanstr1.lenght !== cleanstr2.lenght){
+    return false;
+}
+const ana1 = cleanstr1.split('').sort().join('');
+const ana2 = cleanstr2.split('').sort().join('');
+
+return ana1 === ana2;
 
 }
-
-module.exports = isAnagram;
+console.log(isAnagram("hello","challo"));
+console.log(isAnagram("tiger","regit"));
