@@ -6,8 +6,15 @@
   - `npm run test-palindrome`
 */
 
-function isPalindrome(str) {
-  return true;
+function ispalindrom(number){
+    const reversed = number.toString().split('').reverse().join('');
+    return reversed == number;
 }
-
-module.exports = isPalindrome;
+let number = 454;
+ 
+if(ispalindrom(number)){
+    console.log("string is palindrome.")
+}
+else {
+    console.log("string is not palindrome,")
+}
