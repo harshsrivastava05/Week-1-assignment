@@ -7,8 +7,13 @@
   - `npm run test-anagram`
 */
 
-function isAnagram(str1, str2) {
-
+function anagram(word1,word2){
+  if (word1.split('').sort().join('') == word2.split('').sort().join('')){
+    return "it is anagram";
+  }
+  else{
+    return "it is not anagram";
+  }
 }
-
-module.exports = isAnagram;
+var ans = anagram("hello","illeh");
+console.log(ans); 
